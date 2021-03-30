@@ -1,0 +1,12 @@
+<p>Descrição: {{ tarefa.desc }}</p>
+
+<!-- 
+    Modo normal que pode causar erro 
+    <p>Responsável: {{ tarefa.responsavel.nome }}</p> -->
+
+<!-- 
+    Modo usando o ternário mas fica muito extenso o código
+    <p>Responsável: {{ tarefa.responsavel != null ? tarefa.responsavel.nome : ''}}</p> -->
+
+<!-- Usando o operador elvis podemos trabalhar com objetos que podem vir nulos sem códigos longos de validação -->    
+    <p>Responsável: {{ tarefa.responsavel?.usuario?.nome }}</p>
